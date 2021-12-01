@@ -1,0 +1,78 @@
+[{
+        "firstName": "Marcus",
+        "lastName": "Green",
+        "age": "29",
+        "hobbies": ["football"],
+        "programme": "Frontend"
+    },
+    {
+        "firstName": "Cassandra",
+        "lastName": "White",
+        "age": "18",
+        "hobbies": ["chess", "gaming", "drawing"],
+        "programme": "Backend"
+    },
+    {
+        "firstName": "Hannah",
+        "lastName": "Red",
+        "age": "24",
+        "hobbies": ["basketball", "gaming"],
+        "programme": ".NET"
+    },
+    {
+        "firstName": "Winston",
+        "lastName": "Black",
+        "age": "21",
+        "hobbies": ["basketball, football"],
+        "programme": "Frontend"
+    },
+    {
+        "firstName": "Maria",
+        "lastName": "Scarlet",
+        "age": "19",
+        "hobbies": ["drawing", "chess"],
+        "programme": "Backend"
+    },
+    {
+        "firstName": "Ash",
+        "lastName": "Yellow",
+        "age": "35",
+        "hobbies": ["gaming", "football"],
+        "programme": ".NET"
+    },
+    {
+        "firstName": "Fiona",
+        "lastName": "Grey",
+        "age": "42",
+        "hobbies": ["chess"],
+        "programme": ".NET"
+    },
+    {
+        "firstName": "Fiona",
+        "lastName": "Grey",
+        "age": "29",
+        "hobbies": ["football"],
+        "programme": "Backend"
+    },
+    {
+        "firstName": "Anna",
+        "lastName": "Forest",
+        "age": "21",
+        "hobbies": ["drawing"],
+        "programme": "Frontend"
+    },
+    {
+        "firstName": "Neshin",
+        "lastName": "Pink",
+        "age": "20",
+        "hobbies": ["chess"],
+        "programme": "Backend"
+    },
+    {
+        "firstName": "Orlando",
+        "lastName": "Beige",
+        "age": "24",
+        "hobbies": ["basketball", "drawing"],
+        "programme": "Frontend"
+    }
+]

@@ -1,0 +1,26 @@
+[{
+        "name": "Fun School",
+        "activities": ["drawing", "chess", "football", "basketball", "gaming"],
+        "programmes": []
+    },
+    {
+        "name": "Data School",
+        "activities": ["drawing", "chess", "gaming"],
+        "programmes": [".NET", "Frontend"]
+    },
+    {
+        "name": "Makrosoft School",
+        "activities": ["football", "gaming"],
+        "programmes": ["Backend", ".NET"]
+    },
+    {
+        "name": "Boring School",
+        "activities": "No activities",
+        "programmes": ["Frontend", "Backend"]
+    },
+    {
+        "name": "Frontend School",
+        "activities": ["drawing", "basketball"],
+        "programmes": ["Frontend"]
+    }
+]
