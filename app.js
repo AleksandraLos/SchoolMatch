@@ -4,8 +4,8 @@ let getData = async(URL) => {
     return data;
 };
 async function getInfo() {
-    let students = await getData('/students.json');
-    let schools = await getData('/schools.json');
+    let students = await getData('https://api.mocki.io/v2/01047e91/students');
+    let schools = await getData('https://api.mocki.io/v2/01047e91/schools');
 
     students.forEach((student) => {
         let ol = document.getElementById("list");
@@ -32,7 +32,6 @@ async function getInfo() {
             studList.textContent = `${student.firstName} ${student.lastName} ${student.age} år`;
             document.getElementById("list").appendChild(studList);
         })
-
     })
 
     document.getElementById("name").addEventListener("click", () => {
@@ -40,7 +39,34 @@ async function getInfo() {
         let sortName = students.sort((a, b) => a.lastName !== b.lastName ? a.lastName < b.lastName ? -1 : 1 : 0);
         sortName.forEach((student) => {
             let studList = document.createElement("li");
-            studList.textContent = `${student.firstName} ${student.lastName} ${student.age} år`;
+            studList.textContent = ` ${student.lastName} ${student.firstName} ${student.age} år`;
+            document.getElementById("list").appendChild(studList);
+        })
+    })
+    document.getElementById("front").addEventListener("click", () => {
+        let studentFilter = students.filter(student => student.programme == "Frontend")
+        document.getElementById("list").innerHTML = "";
+        studentFilter.forEach((student) => {
+            let studList = document.createElement("li");
+            studList.textContent = ` ${student.programme} - ${student.firstName} ${student.lastName}`;
+            document.getElementById("list").appendChild(studList);
+        })
+    })
+    document.getElementById("back").addEventListener("click", () => {
+        let studentFilter = students.filter(student => student.programme == "Backend")
+        document.getElementById("list").innerHTML = "";
+        studentFilter.forEach((student) => {
+            let studList = document.createElement("li");
+            studList.textContent = ` ${student.programme} - ${student.firstName} ${student.lastName}`;
+            document.getElementById("list").appendChild(studList);
+        })
+    })
+    document.getElementById("net").addEventListener("click", () => {
+        let studentFilter = students.filter(student => student.programme == ".NET")
+        document.getElementById("list").innerHTML = "";
+        studentFilter.forEach((student) => {
+            let studList = document.createElement("li");
+            studList.textContent = ` ${student.programme} - ${student.firstName} ${student.lastName}`;
             document.getElementById("list").appendChild(studList);
         })
     })
