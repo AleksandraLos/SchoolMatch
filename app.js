@@ -7,11 +7,13 @@ async function getInfo() {
     let students = await getData('https://api.mocki.io/v2/01047e91/students');
     let schools = await getData('https://api.mocki.io/v2/01047e91/schools');
 
+
     students.forEach((student) => {
         let ol = document.getElementById("list");
         let li = document.createElement("li");
         li.textContent = `${student.firstName} ${student.lastName} ${student.age} år`;
         ol.appendChild(li);
+
     })
 
     document.getElementById("age").addEventListener("click", () => {
@@ -48,7 +50,7 @@ async function getInfo() {
         document.getElementById("list").innerHTML = "";
         studentFilter.forEach((student) => {
             let studList = document.createElement("li");
-            studList.textContent = ` ${student.programme} - ${student.firstName} ${student.lastName}`;
+            studList.textContent = ` ${student.firstName}  ${student.lastName} ${student.age} år`;
             document.getElementById("list").appendChild(studList);
         })
     })
@@ -57,7 +59,7 @@ async function getInfo() {
         document.getElementById("list").innerHTML = "";
         studentFilter.forEach((student) => {
             let studList = document.createElement("li");
-            studList.textContent = ` ${student.programme} - ${student.firstName} ${student.lastName}`;
+            studList.textContent = `${student.firstName} ${student.lastName} ${student.age} år`;
             document.getElementById("list").appendChild(studList);
         })
     })
@@ -66,10 +68,14 @@ async function getInfo() {
         document.getElementById("list").innerHTML = "";
         studentFilter.forEach((student) => {
             let studList = document.createElement("li");
-            studList.textContent = ` ${student.programme} - ${student.firstName} ${student.lastName}`;
+            studList.textContent = `${student.firstName}  ${student.lastName} ${student.age} år`;
             document.getElementById("list").appendChild(studList);
         })
     })
+
+
+    //börjar jobba med skolans API
+
 
 }
 getInfo();

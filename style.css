@@ -1,16 +1,44 @@
 body {
+    margin: 80px;
     background-image: url(./photo-1497633762265-9d179a990aa6.jpg);
-    background-repeat: no-repeat,
+    background-repeat: no-repeat;
+    font-family: 'Comic Neue';
 }
 
 header {
+    font-family: 'Comic Neue';
+    text-align: center;
     background-color: #fff;
+    width: 666px;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+header p {
+    background-color: rgb(230, 169, 99);
+    font-size: larger;
+}
+
+.searchAlternatives button {
+    margin-top: 16px;
 }
 
 #list {
+    cursor: pointer;
     background-color: #fff;
+    width: 666px;
+    border-radius: 30px;
+    margin-top: 40px;
 }
 
 #education {
     background-color: rgb(251, 155, 155);
+}
+
+li {
+    margin: 15px 20px;
 }
