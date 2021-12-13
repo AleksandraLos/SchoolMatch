@@ -1,6 +1,3 @@
-function refreshPage() {
-    location.reload();
-}
 let getData = async(URL) => {
     let response = await fetch(URL);
     let data = await response.json();
@@ -56,6 +53,7 @@ async function getInfo() {
             studList.textContent = `${student.firstName} ${student.lastName} ${student.age} år`;
             document.getElementById("list").appendChild(studList);
         })
+
     })
 
     document.getElementById("surname").addEventListener("click", () => {
@@ -107,9 +105,12 @@ async function getInfo() {
             studList.textContent = `${student.firstName}  ${student.lastName} ${student.age} år`;
             document.getElementById("list").appendChild(studList);
 
-        })
-    })
+        });
+        let studentList = document.addEventListener("click", () => {
 
+        })
+
+    })
 }
 
 getInfo();

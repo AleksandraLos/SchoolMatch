@@ -12,6 +12,7 @@ header {
     width: 666px;
     border-radius: 30px;
     padding: 5px;
+    align-items: center;
 }
 
 header h1 {
@@ -41,4 +42,8 @@ header p {
 
 li {
     margin: 15px 20px;
+}
+
+p {
+    background-color: rgb(209, 209, 209);
 }
