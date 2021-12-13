@@ -1,3 +1,6 @@
+// function refreshPage() {
+//     location.reload();
+// }
 let getData = async(URL) => {
     let response = await fetch(URL);
     let data = await response.json();
@@ -14,7 +17,36 @@ async function getInfo() {
         li.textContent = `${student.firstName} ${student.lastName} ${student.age} år`;
         ol.appendChild(li);
 
+        let filterSchool = schools.filter((school) => {
+            let hobbyExists = false;
+            student.hobbies.forEach((hobby) => {
+                if (school.activities.includes(hobby)) {
+                    hobbyExists = true;
+                }
+            });
+            return school.programmes.includes(student.programme) && hobbyExists;
+        });
+
+        filterSchool.forEach((schools) => {
+            let listOfSchools = document.createElement("p");
+            listOfSchools.textContent = `${schools.name}`;
+            listOfSchools.style.color = "green";
+            listOfSchools.style.display = "none";
+            li.appendChild(listOfSchools);
+
+            li.addEventListener("click", () => {
+                if (listOfSchools.style.display === "none") {
+                    listOfSchools.style.display = "block";
+                } else {
+                    listOfSchools.style.display = "none";
+                }
+            });
+
+        });
+
     })
+
+
 
     document.getElementById("age").addEventListener("click", () => {
         document.getElementById("list").innerHTML = "";
@@ -45,6 +77,7 @@ async function getInfo() {
             document.getElementById("list").appendChild(studList);
         })
     })
+
     document.getElementById("front").addEventListener("click", () => {
         let studentFilter = students.filter(student => student.programme == "Frontend")
         document.getElementById("list").innerHTML = "";
@@ -53,7 +86,9 @@ async function getInfo() {
             studList.textContent = ` ${student.firstName}  ${student.lastName} ${student.age} år`;
             document.getElementById("list").appendChild(studList);
         })
+
     })
+
     document.getElementById("back").addEventListener("click", () => {
         let studentFilter = students.filter(student => student.programme == "Backend")
         document.getElementById("list").innerHTML = "";
@@ -63,6 +98,7 @@ async function getInfo() {
             document.getElementById("list").appendChild(studList);
         })
     })
+
     document.getElementById("net").addEventListener("click", () => {
         let studentFilter = students.filter(student => student.programme == ".NET")
         document.getElementById("list").innerHTML = "";
@@ -70,12 +106,10 @@ async function getInfo() {
             let studList = document.createElement("li");
             studList.textContent = `${student.firstName}  ${student.lastName} ${student.age} år`;
             document.getElementById("list").appendChild(studList);
+
         })
     })
 
-
-    //börjar jobba med skolans API
-
-
 }
+
 getInfo();
