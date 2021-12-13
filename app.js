@@ -1,6 +1,6 @@
-// function refreshPage() {
-//     location.reload();
-// }
+function refreshPage() {
+    location.reload();
+}
 let getData = async(URL) => {
     let response = await fetch(URL);
     let data = await response.json();
