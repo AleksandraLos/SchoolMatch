@@ -8,11 +8,13 @@ async function getInfo() {
     let schools = await getData('https://api.mocki.io/v2/01047e91/schools');
 
 
+
     students.forEach((student) => {
         let ol = document.getElementById("list");
         let li = document.createElement("li");
         li.textContent = `${student.firstName} ${student.lastName} ${student.age} år`;
         ol.appendChild(li);
+
 
         let filterSchool = schools.filter((school) => {
             let hobbyExists = false;
@@ -106,9 +108,10 @@ async function getInfo() {
             document.getElementById("list").appendChild(studList);
 
         });
-        let studentList = document.addEventListener("click", () => {
+    })
+    let allBtn = document.getElementById("alla").addEventListener("click", () => {
 
-        })
+        location.reload();
 
     })
 }
